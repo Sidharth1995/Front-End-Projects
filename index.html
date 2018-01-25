@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neighborhood Map</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+    <!-- Bootstrap  JS-->
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <div class="navbar navigation">
+      <div class="container-fluid">
+        <div class="nav-title navbar-brand">
+          <div>Bhubaneswar Map</div>
+        </div>
+
+        <form class="navbar-form navbar-right" role="search">
+            <div class="input-group ">
+              <input type="text" class="form-control " placeholder="Search For Places" name="q" data-bind="textInput: searchItem, valueUpdate: 'afterkeydown'">
+              <div class="input-group-btn">
+                  <button class="btn btn-default"><i class="glyphicon glyphicon-search"></i></button>
+              </div>
+            </div>
+        </form>
+
+      </div>
+    </div>
+    <div class="container-fluid row">
+        <div id="map" class="col-xs-9"></div>
+        <div id="navbarSupportedContent" class="col-xs-3   col-xs-offset-9 collapse in">
+          <div class="sidenav ">
+            <div class="list-group " data-bind="foreach: locationList">
+                <a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: show"></a>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Knockout.js -->
+    <script src="js/lib/knockout.min.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?libraries=places,drawing,geometry&key=AIzaSyD7_YRKPBo45GyS2iHNDMl7J4Y7_wOp4og&callback=initMap" onerror="googleMapsError()">
+    </script>
+  </body>
+</html>

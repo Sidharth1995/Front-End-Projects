@@ -1,0 +1,58 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.navbar {
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-color: #007399;
+}
+
+.nav-title {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+}
+
+#map {
+    width : 100vw;
+    height: 100vh;
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: -4;
+}
+
+.sidenav {
+    margin: 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+
+.list-group-item {
+    margin: 0;
+    color: black;
+    border-bottom: solid 1px;
+    border-left: solid 1px;
+    font-family: sans-serif;
+}
+
+.list-group-item:focus {
+    color: #000;
+}
+
+.list-group-item:hover {
+    font-family: "Lato";
+}
+
+@media screen and (max-width: 650px) {
+    .list-group-item {
+        font-size: 15px;
+    }
+}
